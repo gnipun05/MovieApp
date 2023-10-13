@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react'
-import {Link} from 'react-router-dom'
+import {Link, useNavigate } from 'react-router-dom'
 import user from '../../images/user.png'
 import "./Header.scss"
 import { useDispatch } from 'react-redux'
@@ -8,6 +8,7 @@ import { fetchAsyncshows, fetchAsyncMovies } from '../../features/movies/movieSl
 const Header = () => {
   const [term, setTerm]=useState('Friends')
   const dispatch = useDispatch()
+  const navigate = useNavigate()
 
   const getSearchTerm = () => {
     if(term === '') 
@@ -15,6 +16,7 @@ const Header = () => {
     dispatch(fetchAsyncMovies(term))
     dispatch(fetchAsyncshows(term))
     setTerm('')
+    navigate('/MovieApp')
   }
 
   const submitHandler = (e) => {
