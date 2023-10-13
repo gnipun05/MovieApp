@@ -1,5 +1,11 @@
 @import "../../common/colors.scss";
 
+.movie-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
 .movie-list, .show-list {
     margin: 20px 0px ;
     h2{

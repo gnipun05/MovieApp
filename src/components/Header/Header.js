@@ -29,7 +29,7 @@ const Header = () => {
   return (
     <div className='header'>
       <div className='Logo'>
-        <Link to="/"> Movie App </Link>
+        <Link to="/MovieApp"> Movie App </Link>
       </div>
       <div className='search-bar'>
         <form onSubmit={submitHandler}>
@@ -38,7 +38,10 @@ const Header = () => {
             value={ term } 
             placeholder='Search Movies or Shows' 
             onChange={(e) => setTerm(e.target.value)}/>
-          <button type="submit"><i className='fa fa-search'></i></button>
+  
+            <button type="submit">
+              <i className='fa fa-search'></i>
+            </button>
         </form>
       </div>
       <div className='user-image'>

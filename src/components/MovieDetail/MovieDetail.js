@@ -7,6 +7,7 @@ import './MovieDetail.scss'
 
 const MovieDetail = () => {
   const { imdbID } = useParams()
+  console.log(imdbID);
   const dispatch = useDispatch()
   const data = useSelector(getSelectedMovieOrShow)
 
